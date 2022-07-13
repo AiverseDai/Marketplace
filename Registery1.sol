@@ -16,10 +16,13 @@ contract Sellers {
     }
 
     
-    function updateprofile(string memory name,string memory email,uint256 mobile) public  {
-        sellers[msg.sender].name = name;
-        sellers[msg.sender].email = email;
-        sellers[msg.sender].mobileNumber = mobile;
+    function updateprofile(string memory _name,string memory _email,uint256 _mobile , string memory _name_of_service,address _id) public  {
+        sellers[msg.sender].name = _name;
+        sellers[msg.sender].email = _email;
+        sellers[msg.sender].mobileNumber = _mobile;
+        sellers[msg.sender].id = _id;
+        sellers[msg.sender].name_of_service = _name_of_service;
+
     }
 
    
